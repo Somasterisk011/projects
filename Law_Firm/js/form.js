@@ -359,3 +359,60 @@ AOS.init({
   duration: 1500, // how long animation lasts
   once: true, // ✅ ensures it happens only on first scroll-in
 });
+
+// Form submission with SweetAlert2 feedback
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+  const action = form.action;
+
+  try {
+    const response = await fetch(action, {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" },
+    });
+
+    if (response.ok) {
+      Swal.fire({
+        icon: "success",
+        title: "Message Sent Successfully!",
+        text: "Thank you for reaching out. We’ll contact you soon.",
+        background: "#111",
+        color: "#f9f9f9",
+        iconColor: "#f5c542",
+        showConfirmButton: false, // hide close button
+        timer: 5000, // auto close after 5 seconds
+        timerProgressBar: true,
+        customClass: {
+          popup: "swal2-rounded",
+          timerProgressBar: "custom-timer-bar",
+        },
+        didClose: () => {
+          form.reset(); // reset form after closing
+        },
+      });
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops!",
+        text: "Something went wrong. Please try again later.",
+        background: "#111",
+        color: "#fff",
+        confirmButtonColor: "#d33",
+      });
+    }
+  } catch (error) {
+    Swal.fire({
+      icon: "error",
+      title: "Error",
+      text: "Unable to send your message. Check your connection.",
+      background: "#111",
+      color: "#fff",
+      confirmButtonColor: "#d33",
+    });
+  }
+});
