@@ -274,7 +274,7 @@
                     data-aos="fade-left"
                     data-aos-delay="200"
                   >
-                    <form action="https://formsubmit.co/prstsomnath22@gmail.com" method="POST" data-aos="fade-up" data-aos-delay="50">
+                    <form id="contactForm" action="https://formsubmit.co/prstsomnath22@gmail.com" method="POST" data-aos="fade-up" data-aos-delay="50">
                       <!-- Name -->
                       <div class="mb-3">
                         <label for="name" class="form-label">Full Name</label>
@@ -345,6 +345,15 @@
                           required
                         ></textarea>
                       </div>
+
+                      <!-- Hidden fields -->
+                      <input
+                        type="hidden"
+                        name="_subject"
+                        value="New Inquiry from Legal Firm Website"
+                      />
+                      <input type="hidden" name="_template" value="table" />
+                      <input type="hidden" name="_captcha" value="false" />
 
                       <!-- Submit -->
                       <div class="d-grid">
@@ -1681,9 +1690,11 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/include-header.js"></script>
     <script src="../js/include-footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/form.js"></script>
   </body>
 </html>
+
 
 
 
