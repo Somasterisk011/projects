@@ -2385,3 +2385,12 @@ a,
 .whatsapp-btn > a {
   color: var(--color-white-soft);
 }
+
+.swal2-rounded {
+  border-radius: 20px !important;
+}
+.custom-timer-bar {
+  background: linear-gradient(90deg, #f5c542, #ffd86b) !important;
+  height: 5px !important;
+  border-radius: 0 0 20px 20px !important;
+}
