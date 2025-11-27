@@ -197,7 +197,7 @@ img {
   position: relative;
 }
 .header-container .info-bar > ul li {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-weight: 400;
   font-style: oblique;
 }
@@ -2416,3 +2416,4 @@ a,
   height: 5px !important;
   border-radius: 0 0 20px 20px !important;
 }
+
