@@ -492,12 +492,14 @@ svg {
 .carousel-caption h5 {
   font-size: 3rem;
   font-weight: bold;
-  color: #fff;
+  color: var(--bg-secondary);
+  text-shadow: 4px 3px 5px #333;
 }
 
 .carousel-caption p {
   font-size: 1.5rem;
-  color: #f1f1f1;
+  color: var(--bg-secondary);
+  text-shadow: 3px 2px 3px #111;
 }
 
 .carousel-caption .btn {
@@ -2424,4 +2426,5 @@ a,
   justify-content: space-around;
   gap: 50px;
 }
+
 
