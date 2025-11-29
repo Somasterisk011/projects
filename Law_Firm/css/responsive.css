@@ -150,10 +150,12 @@
 
   .carousel-caption h5 {
     font-size: 1.2rem !important;
+    text-shadow: 2px -2px 5px #111;
   }
 
   .carousel-caption p {
     font-size: 0.8rem !important;
+    text-shadow: 2px -2px 3px #111;
     width: 80%;
   }
 
@@ -888,3 +890,4 @@
     color: #c7a15b !important;
   }
 }
+
