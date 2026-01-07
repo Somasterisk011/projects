@@ -2,7 +2,7 @@
 
 let currentPage = 1;
 const perPage = 4; // Number of blogs per page
-const apiURL = "http://localhost/myblog/wp-json/wp/v2/posts";
+const apiURL = "https://legacylawexpert.com/BlogLLE/wp-json/wp/v2/posts";
 
 async function loadWPBlogs(page = 1) {
   currentPage = page;
@@ -91,7 +91,7 @@ loadWPBlogs();
 
 async function loadRecentPosts() {
   const res = await fetch(
-    "http://localhost/myblog/wp-json/wp/v2/posts?per_page=3&_embed"
+    "https://legacylawexpert.com/BlogLLE/wp-json/wp/v2/posts?per_page=3&_embed"
   );
   const posts = await res.json();
 
@@ -141,7 +141,7 @@ loadRecentPosts();
 // Dynamic Category section display on page for future use
 async function loadCategories() {
   const res = await fetch(
-    "http://localhost/myblog/wp-json/wp/v2/categories?per_page=3"
+    "https://legacylawexpert.com/BlogLLE/wp-json/wp/v2/categories?per_page=3"
   );
   const cats = await res.json();
 
@@ -166,7 +166,7 @@ loadCategories();
 const params = new URLSearchParams(window.location.search);
 const postId = params.get("id");
 
-fetch(`http://localhost/myblog/wp-json/wp/v2/posts/${postId}?_embed`)
+fetch(`https://legacylawexpert.com/BlogLLE/wp-json/wp/v2/posts/${postId}?_embed`)
   .then((res) => res.json())
   .then((post) => {
     document.getElementById("post-title").innerHTML = post.title.rendered;
@@ -187,7 +187,7 @@ fetch(`http://localhost/myblog/wp-json/wp/v2/posts/${postId}?_embed`)
   });
 
 fetch(
-  `http://localhost/myblog/wp-json/wp/v2/comments?post=${postId}&per_page=10`
+  `https://legacylawexpert.com/BlogLLE/wp-json/wp/v2/comments?post=${postId}&per_page=10`
 )
   .then((res) => res.json())
   .then((comments) => {
@@ -219,3 +219,4 @@ document.getElementById("back-btn").addEventListener("click", () => {
 //       </a>
 //     `;
 //   });
+
