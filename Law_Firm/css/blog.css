@@ -444,6 +444,7 @@ small {
 }
 .single-page-blog #post-content h2 {
   font-size: 24px;
+  margin-top: 3rem;
 }
 .single-page-blog #post-content h3 {
   font-size: 21px;
@@ -553,3 +554,4 @@ small {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
